@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Nest CRUD'
+  short_description: 'Implemente CRUDs NestJS seguros e consistentes'
+  default_prompt: 'Use $nest-crud para implementar este CRUD no NestJS seguindo os padrões reais do projeto.'

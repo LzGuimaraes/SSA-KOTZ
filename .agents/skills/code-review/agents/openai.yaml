@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Code Review'
+  short_description: 'Revise código full-stack com achados priorizados'
+  default_prompt: 'Use $code-review para revisar este diff e apresentar primeiro os problemas por severidade.'

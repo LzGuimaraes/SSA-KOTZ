@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Git Commit'
+  short_description: 'Crie commits Conventional Commits com segurança'
+  default_prompt: 'Use $git-commit para revisar as alterações e criar commits Conventional Commits coerentes.'

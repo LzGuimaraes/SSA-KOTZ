@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Prisma Migration'
+  short_description: 'Planeje migrations Prisma seguras e verificáveis'
+  default_prompt: 'Use $prisma-migration para analisar o schema e preparar uma migration segura preservando os dados.'
