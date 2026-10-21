@@ -1,0 +1,41 @@
+{
+  "name": "ssa-kotz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plataforma de guias e builds de Saint Seiya Awakening: Knights of the Zodiac.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "env:setup": "node scripts/setup-env.mjs",
+    "dev": "concurrently --kill-others --names api,web \"npm run start:dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "dev:backend": "npm run start:dev --workspace backend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "build": "npm run build --workspaces",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:up": "docker compose up -d --wait postgres",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f postgres",
+    "prisma:generate": "npm run prisma:generate --workspace backend",
+    "prisma:validate": "npm run prisma:validate --workspace backend",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "concurrently": "10.0.6",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "10.11.1",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "8.72.0"
+  }
+}
